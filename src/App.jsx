@@ -12,20 +12,28 @@ export default function App() {
   });
 }, []);
 const sendAppointment = (e) => {
+
   e.preventDefault();
 
   emailjs.sendForm(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
+    "service_hqucigk",
+    "template_wydauz8",
     e.target,
-    "YOUR_PUBLIC_KEY"
+    "D_6A1XMw3-ZeffLBJ"
   )
+
   .then(() => {
-    alert("Appointment Request Sent!");
+
+    alert("Appointment Request Sent Successfully!");
+
   })
+
   .catch(() => {
+
     alert("Something went wrong.");
+
   });
+
 };
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">
